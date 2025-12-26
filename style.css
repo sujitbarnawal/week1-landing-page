@@ -1,7 +1,7 @@
-body{
+body {
     padding: 0;
     margin: 0;
-    font-family: sans-serif,'Times New Roman', Times, serif;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
 }
 
 header {
@@ -12,7 +12,7 @@ header {
 }
 
 
-.navbar{ 
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,26 +20,26 @@ header {
     margin: auto;
 }
 
-.navbar-ul{
+.navbar-ul {
     display: flex;
     justify-content: center;
-    gap:15px;
+    gap: 15px;
     list-style: none;
 }
 
-.navbar-ul  a{
+.navbar-ul a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: light;
-    
+
 }
 
-.navbar-ul a:hover{
+.navbar-ul a:hover {
     color: rgba(0, 0, 255, 0.692);
 }
 
-.logo{
+.logo {
     font-weight: bold;
     font-family: sans-serif;
     font-size: 25px;
@@ -47,7 +47,7 @@ header {
     cursor: pointer;
 }
 
-#hero{
+#hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     min-height: 600px;
@@ -58,17 +58,18 @@ header {
     text-align: center;
 }
 
-#hero h2{
+#hero h2 {
     font-size: 50px;
 }
 
-#hero p{
+#hero p {
     font-weight: lighter;
     margin-top: -10px;
     font-size: 18px;
 }
-#hero button{
-    background-color:#2563eb;
+
+#hero button {
+    background-color: #2563eb;
     border: none;
     padding: 15px;
     color: white;
@@ -78,39 +79,39 @@ header {
     margin-top: 20px;
 }
 
-#hero button:hover{
+#hero button:hover {
     transform: scale(1.1);
     transition: all 0.3s;
 }
 
-#features{
+#features {
     min-height: 600px;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background:#f9fafb;
+    background: #f9fafb;
 }
 
-#features h2{
+#features h2 {
     font-size: 50px;
 }
 
-.cards{
+.cards {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr;
     gap: 10px;
 }
 
-.card{
- text-align: center;
- background-color: white;
- box-shadow: 0 1px 3px rgba(0,0,0,0.1);
- border-radius: 5px;
- padding: 42px 32px;
+.card {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 42px 32px;
 }
 
-.card .icon{
+.card .icon {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 20px;
     border-radius: 5px;
@@ -123,19 +124,19 @@ header {
     margin-top: 20px;
 }
 
-.card .text{
+.card .text {
     font-weight: lighter;
     font-size: 25px;
 
 }
 
-.card .description{
+.card .description {
     font-weight: lighter;
     color: gray;
     font-size: 18px;
 }
 
-#get-started{
+#get-started {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     min-height: 400px;
@@ -146,17 +147,18 @@ header {
     text-align: center;
 }
 
-#get-started h2{
+#get-started h2 {
     font-size: 50px;
 }
 
-#get-started p{
+#get-started p {
     font-weight: lighter;
     margin-top: -10px;
     font-size: 18px;
 }
-#get-started button{
-    background-color:white;
+
+#get-started button {
+    background-color: white;
     border: none;
     padding: 15px;
     color: #2563eb;
@@ -166,13 +168,13 @@ header {
     margin-top: 20px;
 }
 
-#get-started button:hover{
+#get-started button:hover {
     transform: scale(1.1);
     transition: all 0.3s;
 }
 
-footer{
-    background:#111827;
+footer {
+    background: #111827;
     color: gray;
     padding: 40px 10px;
     display: flex;
@@ -181,10 +183,35 @@ footer{
 
 }
 
-footer p{
+footer a {
     cursor: pointer;
+    text-decoration: none;
+    color: gray;
 }
 
-footer p:hover{
-  color:white;
+footer a:hover {
+    color: white;
+}
+
+
+@media (min-width: 470px) {
+    .navbar-ul a {
+        font-size: 18px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+
+
+@media (min-width:471px) and (max-width: 700px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
