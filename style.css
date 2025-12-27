@@ -21,17 +21,14 @@ header {
 }
 
 .navbar-ul {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    list-style: none;
+    display: none;
 }
 
 .navbar-ul a {
     text-decoration: none;
     color: black;
-    font-size: 15px;
-    font-weight: light;
+    font-size: 12px;
+    font-weight: lighter;
 
 }
 
@@ -47,10 +44,14 @@ header {
     cursor: pointer;
 }
 
+.menu-icon {
+    display: block;
+}
+
 #hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    min-height: 600px;
+    min-height: 91vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,11 +65,16 @@ header {
 
 #hero p {
     font-weight: lighter;
-    margin-top: -10px;
     font-size: 18px;
+    line-height: 2;
 }
 
-#hero button {
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-1 {
     background-color: #2563eb;
     border: none;
     padding: 15px;
@@ -79,49 +85,99 @@ header {
     margin-top: 20px;
 }
 
-#hero button:hover {
-    transform: scale(1.1);
+.btn-2 {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.btn-1:hover {
+    transform: scale(1.01);
     transition: all 0.3s;
 }
 
+.btn-2:hover {
+    background: white;
+    color: #2563eb;
+    transition: all 0.3s;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    margin-top: -10px;
+    gap: 20px;
+}
+
+
+#hero .data {
+    font-weight: bolder;
+    font-size: 40px;
+    margin-bottom: -30px;
+}
+
+#hero .data-title {
+    color: white;
+    font-size: 13px;
+
+}
+
 #features {
-    min-height: 600px;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
     background: #f9fafb;
+    padding: 50px;
+}
+
+#features h1 {
+    color: #2563eb;
+    font-size: 15px;
 }
 
 #features h2 {
     font-size: 50px;
 }
 
+
+
+
 .cards {
+    width: 80%;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 20px;
 }
 
 .card {
     text-align: center;
     background-color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 42px 32px;
+    border-radius: 10px;
+    padding: 30px 20px;
+    cursor: pointer;
 }
 
 .card .icon {
+    width: 64px;
+    height: 64px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 20px;
-    border-radius: 5px;
+    border-radius: 12px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    margin: auto;
-    margin-top: 20px;
+    justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 32px;
 }
 
 .card .text {
@@ -134,6 +190,147 @@ header {
     font-weight: lighter;
     color: gray;
     font-size: 18px;
+}
+
+#benefits {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: white;
+    padding: 50px;
+}
+
+#benefits h1 {
+    color: #2563eb;
+    font-size: 15px;
+}
+
+#benefits h2 {
+    font-size: 50px;
+}
+
+.benefit-items{
+    display: grid;
+    grid-template-columns: 1fr ;
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+}
+
+.benefit-image{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 40px;
+}
+
+.benefit-info{
+    text-align: left;
+}
+
+.benefit-title{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.benefit-description{
+    font-size: 20px;
+    color: grey;
+}
+
+.benefits{
+    padding: 10px 0;
+    font-size: 16px;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.benefits::before{
+    content: "✓";
+    background: #10b981;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+#testimonials {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: #f9fafb;
+    padding: 50px;
+}
+
+#testimonials h1 {
+    color: #2563eb;
+    font-size: 15px;
+}
+
+#testimonials h2 {
+    font-size: 50px;
+}
+
+
+
+.testimonial-cards{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+}
+
+.testimonial-card{
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px 20px;
+    cursor: pointer;
+
+}
+
+.testimonial-card-description{
+    font-style: italic;
+    color: grey;
+    line-height: 1.5;
+}
+
+.writer{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 20px;
+}
+
+.writer .name-icon-logo{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.writer .name-description{
+    font-size: 20px;
 }
 
 #get-started {
@@ -195,6 +392,8 @@ footer a:hover {
 
 
 @media (min-width: 470px) {
+
+
     .navbar-ul a {
         font-size: 18px;
     }
@@ -203,6 +402,41 @@ footer a:hover {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .testimonial-cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+   
+    
+
+}
+
+@media (min-width:650px) {
+    .navbar-ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        list-style: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
 }
 
 
@@ -214,4 +448,19 @@ footer a:hover {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .testimonial-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:950px) {
+    .benefit-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+}
+    
 }
