@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: sans-serif, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
 }
 
 header {
@@ -152,8 +153,6 @@ header {
 
 
 .cards {
-    width: 80%;
-    margin: auto;
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -214,8 +213,6 @@ header {
 .benefit-items {
     display: grid;
     grid-template-columns: 1fr;
-    width: 80%;
-    margin: auto;
     gap: 20px;
 }
 
@@ -290,8 +287,7 @@ header {
 
 
 .testimonial-cards {
-    width: 80%;
-    margin: 0 auto;
+
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -334,7 +330,7 @@ header {
 }
 
 #pricing {
-    min-height: 500px;
+    min-height: 600px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -354,8 +350,6 @@ header {
 
 .pricing-options {
     display: grid;
-    margin: auto;
-    width: 80%;
     grid-template-columns: 1fr;
     gap: 20px;
 }
@@ -365,7 +359,7 @@ header {
     background-color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding: 30px 20px;
+    padding: 20px 20px;
     cursor: pointer;
     border: 1px solid gray;
 
@@ -375,6 +369,7 @@ header {
     border: 3px solid #2563eb;
     box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
     transform: none;
+
 }
 
 
@@ -408,11 +403,12 @@ header {
     font-size: 20px;
     border-radius: 5px;
     cursor: pointer;
-    width: 250px;
+    width: 200px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.pricing-btn:hover{
+.pricing-btn:hover {
     background: #2563eb;
     color: white;
     transition: all 0.3s;
@@ -426,11 +422,12 @@ header {
     font-size: 20px;
     border-radius: 5px;
     cursor: pointer;
-    width: 250px;
+    width: 200px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.popular-btn{
+.popular-btn {
     background: #2563eb;
     border: none;
     color: white;
@@ -445,7 +442,7 @@ header {
     transition: all 0.3s;
 }
 
-.pricing-feature{
+.pricing-feature {
     padding: 10px 20px;
     font-size: 16px;
     color: #374151;
@@ -479,6 +476,7 @@ header {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 #get-started h2 {
@@ -494,9 +492,9 @@ header {
 #get-started button {
     background-color: white;
     border: none;
-    padding: 15px;
+    padding: 20px;
     color: #2563eb;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
@@ -512,7 +510,9 @@ footer {
     color: gray;
     padding: 40px 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 10%;
     gap: 20px;
 
 }
@@ -527,6 +527,29 @@ footer a:hover {
     color: white;
 }
 
+
+
+.inner-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.inner-footer .footer-items h1{
+    font-size: 18px;
+    color: white;
+}
+
+.inner-footer .footer-items p{
+    font-size: 15px;
+    color: grey;
+    font-weight: light;
+}
+
+.copyright-text{
+    padding: 50px;
+    text-align: center;
+}
 
 @media (min-width: 470px) {
 
@@ -543,7 +566,21 @@ footer a:hover {
     .testimonial-cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+        margin: 0 auto;
     }
+
+    .benefit-items {
+        width: 80%;
+        margin: auto;
+    }
+
+    .cards {
+        width: 80%;
+        margin: auto;
+    }
+
+
 
 
     .buttons {
@@ -556,6 +593,16 @@ footer a:hover {
         display: flex;
         flex-direction: row;
         gap: 40px;
+    }
+
+    .inner-footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .inner-footer {
+        width: 80%;
+        margin: auto;
     }
 
 
@@ -575,13 +622,13 @@ footer a:hover {
         display: none;
     }
 
-    
+
 
 
 }
 
-@media (min-width:720px){
-    .pricing-options{
+@media (min-width:720px) {
+    .pricing-options {
         display: grid;
         grid-template-columns: 1fr 1fr;
         width: 80%;
@@ -606,7 +653,7 @@ footer a:hover {
 
 
 
-    
+
 }
 
 
@@ -618,17 +665,20 @@ footer a:hover {
         margin: auto;
         gap: 20px;
     }
-    
+    .inner-footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
 }
 
 @media (min-width:1200px) {
-    .pricing-options{
+    .pricing-options {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         width: 80%;
         margin: auto;
     }
 
-    
-}
 
+}
